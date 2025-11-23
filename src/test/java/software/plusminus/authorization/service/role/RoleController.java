@@ -1,4 +1,4 @@
-package software.plusminus.authorization.service.authorizer.role;
+package software.plusminus.authorization.service.role;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

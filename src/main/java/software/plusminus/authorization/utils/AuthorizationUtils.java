@@ -3,8 +3,6 @@ package software.plusminus.authorization.utils;
 import lombok.experimental.UtilityClass;
 import org.springframework.lang.Nullable;
 import org.springframework.web.method.HandlerMethod;
-import software.plusminus.authorization.exception.UnauthorizedException;
-import software.plusminus.security.SecurityRequest;
 
 import java.lang.annotation.Annotation;
 import java.net.MalformedURLException;
@@ -13,23 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 
 @UtilityClass
 public class AuthorizationUtils {
-    
-    @Nullable
-    public SecurityRequest toNullableSecurityRequest(HttpServletRequest request) {
-        if (request instanceof SecurityRequest) {
-            return (SecurityRequest) request;
-        } else {
-            return null;
-        }
-    }
-
-    public SecurityRequest toSecurityRequest(HttpServletRequest request) {
-        SecurityRequest securityRequest = toNullableSecurityRequest(request);
-        if (securityRequest == null) {
-            throw new UnauthorizedException("Request is not authenticated");
-        }
-        return securityRequest;
-    }
 
     public String getHost(HttpServletRequest request) {
         URL url;
@@ -62,5 +43,4 @@ public class AuthorizationUtils {
         }
         return null;
     }
-    
 }

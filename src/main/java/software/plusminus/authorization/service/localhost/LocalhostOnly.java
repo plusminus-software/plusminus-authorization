@@ -1,4 +1,4 @@
-package software.plusminus.authorization.service.authorizer.role;
+package software.plusminus.authorization.service.localhost;
 
 import software.plusminus.authorization.annotation.AuthorizationAnnotation;
 
@@ -10,6 +10,5 @@ import java.lang.annotation.Target;
 @AuthorizationAnnotation
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Role {
-    String[] value();
+public @interface LocalhostOnly {
 }
