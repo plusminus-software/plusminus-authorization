@@ -30,7 +30,7 @@ public class RoleAuthorizerIntegrationTest extends IntegrationTest {
                 .username("TestUser")
                 .roles(Collections.singleton("admin"))
                 .build();
-        manager().withSecurity(security);
+        manager().security(security);
 
         ResponseEntity<String> result = restTemplate.getForEntity("/", String.class);
 
@@ -45,7 +45,7 @@ public class RoleAuthorizerIntegrationTest extends IntegrationTest {
                 .username("TestUser")
                 .roles(Collections.singleton("ADMIN"))
                 .build();
-        manager().withSecurity(security);
+        manager().security(security);
 
         ResponseEntity<String> result = restTemplate.getForEntity("/", String.class);
 
@@ -60,7 +60,7 @@ public class RoleAuthorizerIntegrationTest extends IntegrationTest {
                 .username("TestUser")
                 .roles(Collections.singleton("user"))
                 .build();
-        manager().withSecurity(security);
+        manager().security(security);
 
         ResponseEntity<Map> response = restTemplate.getForEntity("/", Map.class);
 
