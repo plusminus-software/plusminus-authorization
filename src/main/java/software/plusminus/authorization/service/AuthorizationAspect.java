@@ -1,4 +1,4 @@
-package software.plusminus.authorization.config;
+package software.plusminus.authorization.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.core.Ordered;
@@ -8,7 +8,6 @@ import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 import software.plusminus.aspect.Before;
 import software.plusminus.authorization.exception.AuthorizationException;
 import software.plusminus.authorization.model.AuthorizationResult;
-import software.plusminus.authorization.service.Authorizer;
 import software.plusminus.context.Context;
 
 import java.util.List;

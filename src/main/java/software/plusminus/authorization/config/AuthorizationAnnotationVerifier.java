@@ -1,11 +1,11 @@
-package software.plusminus.authorization.annotation;
+package software.plusminus.authorization.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
-import software.plusminus.authorization.config.AnnotationAuthorizerContainer;
+import software.plusminus.authorization.annotation.AuthorizationAnnotation;
 import software.plusminus.util.AnnotationUtils;
 
 import java.lang.annotation.Annotation;
